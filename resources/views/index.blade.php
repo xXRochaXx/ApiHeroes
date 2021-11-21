@@ -10,15 +10,16 @@
 </head>
 <body>
 
-<div class="container-sm">
-    <form method="get">
-        <div class="mb-3">
-            <label for="heroiInput" class="form-label">Heroi Nome</label>
-            <input type="text" class="form-control" id="heroiInput" name="name" style="max-width:200px">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search Hero" aria-label="Search" name="name">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
-        <button type="submit" class="btn btn-primary">Procurar</button>
-    </form>
-</div>
+    </div>
+</nav>
 
 <div class="container">
     @for($i = 0; $i < count($results);$i++)
