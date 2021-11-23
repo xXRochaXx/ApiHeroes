@@ -8,7 +8,9 @@ use Laravel\Socialite\Facades\Socialite;
 
 Route::get('home/{name?}', [HomeController::class, 'index']);
 
-
+Route::get('index', function () {
+    return view('index');
+});
 
 Route::get('/auth/redirect', function () {
     return Socialite::driver('facebook')->redirect();
